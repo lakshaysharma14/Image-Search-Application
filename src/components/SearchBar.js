@@ -2,15 +2,13 @@ import React, { Component } from 'react'
 
 class SearchBar extends Component 
 {
-    state=
-    {
-        term:""
-    }
+    state = { term:"" }
 
     onFormSubmit=(e)=>
     {
         e.preventDefault();
         this.props.onSubmit(this.state.term); 
+        //Communication from CHILD --> PARENT *(IMPORTANT)*
         //When we are inside the class component we use this.props rather than props
     }
 
